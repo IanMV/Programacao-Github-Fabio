@@ -11,11 +11,21 @@
     */
 
     //ENTRADA
-
+    const km = prompt('Qual a distância da viagem?(Informe em km)');
+    const porDia = prompt('Quantos quilômetros pretende viajar por dia?');
 
     //PROCESSAMENTO
+    const dias = km / porDia;
 
-    
     //SAÍDA
+    if (dias <= 3) {
+        alert(`A viajem pode ser realizada em qualquer período.`)
+    } else if (dias > 20) {
+        alert(`deverá trabalhar remoto.`)
+    } else if (dias <= 10) {
+        alert(`A viajem deverá ser realizada nas férias de julho.`)
+    }  else if (dias <= 20) {
+        alert(`A viajem deverá ser realizada nas férias de verão.`)
+    };
 
 </script>

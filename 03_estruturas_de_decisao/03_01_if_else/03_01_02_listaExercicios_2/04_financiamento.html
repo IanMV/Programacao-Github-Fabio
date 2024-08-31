@@ -10,11 +10,24 @@
     */
 
     //ENTRADA
-
+    const valorImovel = prompt("Qual é o valor do imóvel?");
+    const financiamento = prompt("Em quantos anos será o financiamento?");
+    const salario = prompt("Qual o salário do comprador?");
 
     //PROCESSAMENTO
+    const prestacao = Math.round(valorImovel / (financiamento * 12));
+    let aprovado
+    if (prestacao > salario * 0.30) {
+        aprovado = "negado"
+    } else {
+        aprovado = "aprovado"
+    }
 
-    
     //SAÍDA
+    if (aprovado == "aprovado") {
+        alert(`o valor da parcela será ${prestacao} reais.`)
+    } else {
+        alert(`o finaciamento foi negado.`)
+    };
 
 </script>

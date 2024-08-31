@@ -15,11 +15,20 @@
     */
 
     //ENTRADA
-
+let salario = prompt("Informe seu salário");
 
     //PROCESSAMENTO
-
+if (salario <= 2000) {
+   salario = salario * 1.15
+} else if (salario > 7000) {
+    salario = salario * 1.05
+}  else if (salario > 4000) {
+    salario = salario * 1.075
+}  else if (salario > 2000) {
+    salario = salario * 1.10
+}
     
     //SAÍDA
+alert(`com o reajuste seu salário agora é ${salario} reais.`)
 
 </script>
