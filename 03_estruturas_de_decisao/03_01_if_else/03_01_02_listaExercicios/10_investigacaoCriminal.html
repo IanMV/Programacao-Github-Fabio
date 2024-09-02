@@ -11,11 +11,44 @@
     */
 
     //ENTRADA
-
+    const telefone = prompt("Telefonou para a vítima?");
+    const local = prompt("Esteve no local do crime?");
+    const mora = prompt("Mora perto da vítima?");
+    const caloteiro = prompt("Devia para a vítima?");
+    const clt = prompt("Já trabalhou com a vítima?");
 
     //PROCESSAMENTO
+    let suspeita = 0;
 
+    if (telefone == "sim") {
+        suspeita = suspeita + 1
+    };
+    if (local == "sim") {
+        suspeita = suspeita + 1
+    };
+    if ( mora == "sim") {
+        suspeita = suspeita + 1
+    };
+    if ( caloteiro == "sim") {
+        suspeita = suspeita + 1
+    };
+    if ( clt == "sim") {
+        suspeita = suspeita + 1
+    };
     
     //SAÍDA
+    if (suspeita == 2) {
+        alert("Você é suspeito.")
+    };
+    if (suspeita == 3 || suspeita == 4) {
+        alert("Você é cúmplice.")
+    };
+    if (suspeita == 5) {
+        alert("Você é o assassino.")
+    };
+    if (suspeita >= 0) {
+        alert("Você é inocente.")
+    };
+   
 
 </script>

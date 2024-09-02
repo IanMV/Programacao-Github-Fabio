@@ -6,11 +6,21 @@
     */
 
     //ENTRADA
+    const ano = Number(prompt("Digite um ano."));
 
-    
     //PROCESSAMENTO
+    const bi = ano % 400;
+    const quatro = 4 * Math.ceil(bi / 4);
 
-    
     //SAÍDA
-
+    if (bi == 0) {
+        alert("Esse ano é bissexto.")
+    } else {
+        if (quatro == bi) {
+            alert("Esse ano é bissexto.")
+        } else {
+            alert("Esse ano não é bissexto.")
+        }
+    };
+    
 </script>
