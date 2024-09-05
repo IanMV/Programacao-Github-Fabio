@@ -6,11 +6,20 @@
     */
 
     //ENTRADA
+    const numero = prompt("Digite um número.");
 
-    
     //PROCESSAMENTO
+    const validar = (2 * (Math.ceil(numero / 2))) - numero;
 
-    
     //SAÍDA
+
+    switch (validar == 0) {
+       case true:
+        alert(`Esse numero é par.`)
+           break;
+       case false:
+        alert(`Esse numero é impar.`)
+        break;
+    };
 
 </script>
