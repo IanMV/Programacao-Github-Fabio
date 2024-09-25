@@ -5,11 +5,77 @@
     */
 
     //ENTRADA
+    const numUm = Number(prompt("Diga um primeiro número."));
+    const numDois = Number(prompt("Diga outro segundo número."));
+    const numTres = Number(prompt("Diga mais um terceiro número."));
+    let ordemUm;
+    let ordemDois;
+    let ordemTres;
 
-    
+
+
     //PROCESSAMENTO
-    
+    if (numUm != numDois && numUm != numTres && numTres != numDois) {
+        if (numUm < numDois && numUm < numTres) {
+            ordemUm = numUm;
+        } else if (numUm > numDois && numUm > numTres) {
+            ordemTres = numUm;
+        } else {
+            ordemDois = numUm;
+        };
+
+        if (numDois < numUm && numDois < numTres) {
+            ordemUm = numDois;
+        } else if (numDois > numUm && numDois > numTres) {
+            ordemTres = numDois;
+        } else {
+            ordemDois = numDois;
+        };
+
+        if (numTres < numUm && numTres < numDois) {
+            ordemUm = numTres;
+        } else if (numTres > numUm && numTres > numDois) {
+            ordemTres = numTres;
+        } else {
+            ordemDois = numTres;
+        };
+    } else if (numUm == numDois && numUm == numTres && numDois == numTres) {
+        ordemUm = numUm;
+        ordemDois = numDois;
+        ordemTres = numTres;
+    } else if (numUm == numDois && numUm != numTres) {
+        if (numUm < numTres) {
+            ordemUm = numUm;
+            ordemDois = numDois;
+            ordemTres = numTres;
+        } else {
+            ordemUm = numTres;
+            ordemDois = numDois;
+            ordemTres = numUm;
+        }
+    } else if (numDois == numTres && numDois != numUm) {
+        if (numDois < numUm) {
+            ordemUm = numTres;
+            ordemDois = numDois;
+            ordemTres = numUm;
+        } else {
+            ordemUm = numUm;
+            ordemDois = numDois;
+            ordemTres = numTres;
+        }
+        } else if ( numUm == numTres && numUm != numDois) {
+            if (numUm < numDois) {
+                ordemUm = numTres;
+            ordemDois = numUm;
+            ordemTres = numDois;
+            } else {
+                ordemUm = numDois;
+            ordemDois = numTres;
+            ordemTres = numUm;
+            }
+        };
 
     //SAÍDA
-    
+    alert(`A ordem decrescente é ${ordemTres}, ${ordemDois} e ${ordemUm}.`);
+
 </script>

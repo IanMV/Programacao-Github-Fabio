@@ -13,11 +13,26 @@
     */
 
     //ENTRADA
-    
-    
-    //PROCESSAMENTO
+    const turno = prompt("Informe em que turno estuda. (M-matutino V-Vespertino N-Noturno)").toUpperCase().trim();
+    let cumprimento
 
-    
+    //PROCESSAMENTO
+    switch (turno) {
+        case "M":
+            resultadoFinal = "Bom Dia!";
+            break;
+        case "V":
+            resultadoFinal = "Boa Tarde!";
+            break;
+        case "N":
+            resultadoFinal = "Boa Noite!";
+            break;
+        default:
+            resultadoFinal = "Valor Inválido!";
+            break
+    }
+
     //SAÍDA
+    alert(`${cumprimento}`);
 
 </script>

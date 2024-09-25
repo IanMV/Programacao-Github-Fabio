@@ -7,11 +7,64 @@
     */
 
     //ENTRADA
+    const hemisferio = prompt("Diga em qual hemisfério você vive: (norte-N | sul-S)").toUpperCase();
+    const mesAtual = prompt("Diga em qual mês você está: (em números)");
+    let estacao;
 
-    
     //PROCESSAMENTO
 
+    switch (hemisferio) {
+        case "N":
+            switch (mesAtual) {
+                case 1:
+                case 2:
+                case 3:
+                    estacao = "inverno";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    estacao = "primavera";
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    estacao = "verão";
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    estacao = "outono";
+                    break;
+            }
+            break;
+
+        case "S":
+            switch (mesAtual) {
+                case 1:
+                case 2:
+                case 3:
+                    estacao = "verão";
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    estacao = "outono";
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    estacao = "inverno";
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    estacao = "primavera";
+                    break;
+            }  break;
+    };
 
     //SAÍDA
+    alert(`A estação é ${estacao}`);
 
 </script>

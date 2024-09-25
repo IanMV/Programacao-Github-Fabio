@@ -12,11 +12,48 @@
     */
 
     //ENTRADA
+    const telefone = prompt("Telefonou para a vítima?").toUpperCase().trim();
+    const local = prompt("Esteve no local do crime?").toUpperCase().trim();
+    const semTeto = prompt("Mora perto da vítima?").toUpperCase().trim();
+    const caloteiro = prompt("Devia para a vítima?").toUpperCase().trim();
+    const clt = prompt("Já trabalhou com a vítima?").toUpperCase().trim();
+    let suspeita = 0;
 
-    
     //PROCESSAMENTO
-
+    if (telefone == "SIm") {
+        suspeita = suspeita + 1;
+    };
+    if (local == "SIm") {
+        suspeita = suspeita + 1;
+    };
+    if (semTeto == "SIM") {
+        suspeita = suspeita + 1;
+    };
+    if (caloteiro == "SIM") {
+        suspeita = suspeita + 1;
+    };
+    if (clt == "SIM") {
+        suspeita = suspeita + 1;
+    };
 
     //SAÍDA
+    switch (suspeita) {
+        case 0:
+            alert("Você é inocente.");
+            break;
+        case 2:
+            alert("Você é suspeito.");
+            break;
+        case 3:
+            break;
+            alert("Você é cúmplice.");
+            break;
+        case 4:
+            alert("Você é cúmplice.");
+            break;
+        case 5:
+            alert("Você é o assassino.");
+            break;
+    };
 
 </script>

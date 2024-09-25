@@ -6,16 +6,16 @@
     */
 
     //ENTRADA
-    let variavelA = prompt("Digite um número");
-    let variavelB = prompt("Digite outro número");
+    let variavelA = Number(prompt("Digite um primeiro número inteiro."));
+    let variavelB = Number(prompt("Digite um segundo número inteiro."));
 
     //PROCESSAMENTO
-    const validarInteiro = Math.ceil(variavel);
     const variavelAdois = variavelA;
     const variavelBdois = variavelB;
     variavelA = variavelBdois;
     variavelB = variavelAdois;
 
     //SAÍDA
-    alert(`Os números foram trocados e agora o primeiro número é ${variavelA} e o segundo é ${variavelB}.`);
+    alert(`Os números foram trocados e agora o primeiro número é ${variavelA} e antes seu valor era ${variavelAdois}, e o segundo é ${variavelB} e antes seu valor era ${variavelBdois}.`);
+
 </script>

@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
+    const primeiraNota = Number(prompt("Informe a nota antes da ajuda."));
+    const segundaNota = Number(prompt("Informe a nota depois da ajuda."));
 
+    if (segundaNota > primeiraNota) {
+        const acrecimoDaDiferenca = (segundaNota - primeiraNota) / 4;
+        alert(`O acréscimo do big brother é de ${ acrecimoDaDiferenca } ponto(s).`);
+    } else {
+        alert(`Não tem acréscimo de ponto(s).`);
+    };
     
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-
 </script>

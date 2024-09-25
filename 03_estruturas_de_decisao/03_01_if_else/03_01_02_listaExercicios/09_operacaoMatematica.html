@@ -9,14 +9,15 @@
 
 
     //ENTRADA
-    const numeroUm = Number(prompt("Diga um número"));
-    const numeroDois = Number(prompt("Diga um número"));
-    const operacao = prompt("Diga uma operacao matematica");
+    const numeroUm = Number(prompt("Diga um número."));
+    const numeroDois = Number(prompt("Diga outro número."));
+    const operacao = prompt("Diga uma operação matemática. (x-Multiplicacção +-Adição --Subtração /-Divisão)").trim();
 
     //PROCESSAMENTO
     let calculo;
     let inteiro;
- 
+    let positivo;
+
     if (operacao == "x") {
         calculo = numeroUm * numeroDois;
     } else if (operacao == "+") {
@@ -29,21 +30,33 @@
 
     const validar = Math.ceil(calculo)
     if (validar == calculo) {
-        inteiro = "inteiro"
+        inteiro = "inteiro";
     } else {
-        inteiro = "decimal"
+        inteiro = "decimal";
     };
 
-    const validarDois = (2 *(Math.ceil(calculo / 2))) - calculo ;
+    const validarDois = (2 * (Math.ceil(calculo / 2))) - calculo;
     if (validarDois == 0) {
-        par = "par"
+        par = "par";
     } else {
-        par = "ímpar"
+        par = "ímpar";
+    };
+
+    if (calculo < 0) {
+        positivo = "negativo";
+    } else {
+        positivo = "positivo";
     };
 
     //SAÍDA
-    alert(`O resultado ficou: ${calculo}
+    if (positivo == "positivo") {
+        alert(`O resultado ficou: ${calculo}
     Esse número é ${par}
-    Esse número é ${inteiro}`);
-
+    Esse número é ${inteiro}
+    Esse número é ${positivo}`);
+    } else {
+        alert(`O resultado ficou: ${calculo}
+    Esse número é ${par}
+    Esse número é ${positivo}`);
+    };
 </script>

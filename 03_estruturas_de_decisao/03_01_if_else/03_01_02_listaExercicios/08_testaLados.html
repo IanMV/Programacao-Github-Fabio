@@ -5,11 +5,28 @@
     */    
    
     //ENTRADA
-
+    const ladoUm = Number(prompt("Diga um lado do triângulo."));
+    const ladoDois = Number(prompt("Diga outro lado do triângulo."));
+    const ladoTres = Number(prompt("Diga mais um lado do triângulo."));
     
     //PROCESSAMENTO
-    
-    
-    //SAÍDA
+    let triangulo
+    if (ladoUm + ladoDois > ladoTres && ladoDois + ladoTres > ladoUm && ladoTres + ladoUm > ladoDois) {
+        triangulo = true;
+    } else (
+        alert(`Isso não pode ser um triângulo.`)
+    );
 
+
+    //SAÍDA
+    if (triangulo == true) {
+        if (ladoDois != ladoTres && ladoTres != ladoUm && ladoDois != ladoUm) {
+            alert(`Esse triângulo é escaleno.`);
+        } else if ((ladoDois == ladoTres && ladoDois != ladoUm) || (ladoTres == ladoUm && ladoDois != ladoUm) || (ladoDois == ladoUm && ladoTres != ladoUm)) {
+            alert(`Esse triângulo é isóceles.`);
+        } else if (ladoDois == ladoTres && ladoTres == ladoUm && ladoDois == ladoUm) {
+            alert(`Esse triângulo é equilátero.`);
+        }
+    };
+    
 </script>

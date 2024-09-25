@@ -12,11 +12,11 @@
     */
 
     //ENTRADA
-
+    const nota = prompt("Qual foi sua nota?").toUpperCase().trim();
 
     //PROCESSAMENTO
-
-    
+     
     //SAÍDA
+    (nota <= 10 && nota >= 9) ? alert(`Sua nota conceito é A.`) : (nota < 9 && nota >= 8 ) ? alert(`Sua nota conceitp é B.`) : (nota < 8 && nota >= 7 ) ? alert(`Sua nota conceito é C.`) : (nota < 7 && nota >= 6) ? alert(`Sua nota conceito é D.`) : (nota  < 6 && nota >= 0) ?  alert(`Sua nota conceito é E.`) :  alert(`Informe uma nota válida (0 a 10).`);
 
 </script>

@@ -12,24 +12,24 @@
     */
 
     //ENTRADA
-    const nota = prompt("Qual foi a sua nota?");
+    const nota = prompt("Qual foi a sua nota?").toLocaleUpperCase().trim();
     
     //PROCESSAMENTO
     let conceito;
     
     if (nota >= 9) {
-        conceito = "A"
+        conceito = "A";
     } else if (nota < 9 && nota> 8 || nota == 8) {
-        conceito = "B"
+        conceito = "B";
     } else if (nota < 8 && nota > 7 || nota == 7) {
         conceito = "C"
     } else if (nota < 7 && nota > 6 || nota == 6) {
-        conceito = "D"
+        conceito = "D";
     } else if (nota < 6 ) {
-        conceito = "E"
+        conceito = "E";
     };
 
     //SAÍDA
-    alert(`A sua nota conceito é: ${conceito}`);
+    alert(`A sua nota conceito é: ${conceito}.`);
 
 </script>

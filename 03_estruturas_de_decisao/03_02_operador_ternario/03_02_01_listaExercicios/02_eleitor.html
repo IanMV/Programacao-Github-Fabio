@@ -6,10 +6,11 @@
     */
 
     //ENTRADA
-
+    const nascimento = Number(prompt("Em que ano você nasceu?"));
+    const ano = Number(prompt("Em que ano estamos?"));
 
     //PROCESSAMENTO
-
+    (ano - nascimento >= 16) ? alert(`Você poderá votar!`) : alert(`Você não poderá votar :(`);
     
     //SAÍDA
 

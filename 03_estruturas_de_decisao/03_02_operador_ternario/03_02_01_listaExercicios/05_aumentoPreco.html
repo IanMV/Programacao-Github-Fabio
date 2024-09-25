@@ -10,11 +10,12 @@
     */
 
     //ENTRADA
-
+    let preco = Number(prompt("Qual é o preço do produto?"));
 
     //PROCESSAMENTO
-
+    (preco <= 280) ? preco = preco * 1.20 : (preco <= 700) ? preco = preco * 1.15 : (preco <= 1500) ? preco = preco * 1.10 : preco = preco * 1.05;
     
     //SAÍDA
+    alert(`O produto teve um aumento de preço e agora custa ${preco} reais.`);
 
 </script>

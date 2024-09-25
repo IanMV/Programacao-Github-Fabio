@@ -5,22 +5,24 @@
     Recebe um ano e informa se ele é bissexto ou não.
     */
 
-    //ENTRADA
-    const ano = Number(prompt("Digite um ano."));
 
-    //PROCESSAMENTO
-    const bi = ano % 400;
-    const quatro = 4 * Math.ceil(bi / 4);
+    // ENTRADA
+    let ano = Number(prompt("Digite um ano:"));
 
-    //SAÍDA
-    if (bi == 0) {
-        alert("Esse ano é bissexto.")
+    // PROCESSAMENTO
+    let bissexto;
+
+    if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+        bissexto = true;
     } else {
-        if (quatro == bi) {
-            alert("Esse ano é bissexto.")
-        } else {
-            alert("Esse ano não é bissexto.")
-        }
+        bissexto = false;
     };
-    
+
+    // SAÍDA
+    if (Bissexto) {
+        alert("O ano " + ano + " é bissexto.");
+    } else {
+        alert("O ano " + ano + " não é bissexto.");
+    };
+
 </script>

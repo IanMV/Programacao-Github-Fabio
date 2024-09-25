@@ -12,11 +12,16 @@
     */
 
     //ENTRADA
-
+    const contaAgua = Number(prompt("Quanto custou a conta de água?"));
+    const contaEnergia = Number(prompt ("Quanto custou a conta de energia elétrica?"));
+    const contaTelefone = Number(prompt ("Quanto custou a conta de telefone?"));
+    const supermarket = Number(prompt ("Quanto custou o supermercado?"));
+    const salario = Number(prompt ("Quanto cvocê gnha por mês?"));
 
     //PROCESSAMENTO
-
+    const balanco =  salario - (contaAgua + contaEnergia + contaTelefone +  supermarket);
     
-    //SAÍDA
+    //SAÍDA    
+    (balanco < 0) ? alert(`Falta ${balanco * (-1)} real(is) para pagar todas as contas.`) : alert(`Sobraram ${balanco} real(is).`);
     
 </script>

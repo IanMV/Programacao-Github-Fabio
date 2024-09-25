@@ -9,12 +9,15 @@
     Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
     */
 
-|    //ENTRADA
-
+    //ENTRADA
+    const hora = Number(prompt("Quantas horas você trabalha por semana?"));
+    const recebe = Number(prompt("Quanto você ganha por hora trabalhada?"));
+    let salario
+    let horasRecebe
 
     //PROCESSAMENTO
-
     
     //SAÍDA
+    (hora <= 45) ? (salario = (hora * recebe), horasRecebe = salario / hora, alert(`Seu salário não teve um adicional e seu total é ${salario} reais semanais. Você recebe ${horasRecebe} reais por hora.`)) : (hora <= 60) ? (salario = (hora * (recebe * 1.20)).toFixed(2), horasRecebe = (salario / hora).toFixed(2), alert(`Seu salário teve um adicional de 20% por hora e seu total é ${salario} reais semanais. Você recebe ${horasRecebe} reais por hora.`)) : (salario = (hora * (recebe * 1.30)).toFixed(2), horasRecebe = (salario / hora).toFixed(2), alert(`Seu salário não teve um adicional de 30% por hora e seu total é ${salario} reais semanais. Você recebe ${horasRecebe} reais por hora.`));
 
 </script>

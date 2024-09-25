@@ -9,11 +9,74 @@
     */
 
     //ENTRADA
-
+    const numeroUm = Number(prompt("Diga um número"));
+    const numeroDois = Number(prompt("Diga um número"));
+    const operacao = prompt("Diga uma operacao matematica");
 
     //PROCESSAMENTO
+    let calculo;
+    let inteiro;
+    let positivo;
+    let par;
 
-    
+    switch (operacao) {
+        case "x":
+            calculo = numeroUm * numeroDois;
+            break;
+
+        case "+":
+            calculo = numeroUm + numeroDois;
+            break;
+        case "-":
+            calculo = numeroUm - numeroDois;
+            break;
+        case "/":
+            calculo = numeroUm / numeroDois;
+            break;
+    };
+
+    const validar = Math.ceil(calculo)
+    switch (validar) {
+        case calculo:
+            inteiro = "inteiro";
+            break;
+
+        default:
+            inteiro = "decimal";
+            break;
+    };
+
+    const validarDois = (2 * (Math.ceil(calculo / 2))) - calculo;
+    switch (validarDois) {
+        case 0:
+            par = "par";
+            break;
+
+        default:
+            par = "ímpar";
+            break;
+    };
+
+    if (calculo < 0) {
+        positivo = "negativo"
+    } else {
+        positivo = "positivo"
+    };
+
     //SAÍDA
+    switch (positivo) {
+        case "positivo":
+            alert(`O resultado ficou: ${calculo}
+    Esse número é ${par}
+    Esse número é ${inteiro}
+    Esse número é ${positivo}`);
+            break;
+
+        default:
+            alert(`O resultado ficou: ${calculo}
+    Esse número é ${par}
+    Esse número é ${positivo}`);
+            break;
+    };
 
 </script>
