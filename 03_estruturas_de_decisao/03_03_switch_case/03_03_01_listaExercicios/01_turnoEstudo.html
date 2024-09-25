@@ -13,6 +13,7 @@
     */
 
     //ENTRADA
+<<<<<<< HEAD
     const turno = prompt("Informe em que turno estuda. (M-matutino V-Vespertino N-Noturno)").toUpperCase().trim();
     let cumprimento
 
@@ -34,5 +35,25 @@
 
     //SAÍDA
     alert(`${cumprimento}`);
+=======
+    const turno = prompt("Que turno você estuda?");
+
+    //PROCESSAMENTO
+
+
+    //SAÍDA
+    switch (turno) {
+        case "M":
+            alert(`Bom Dia!`)
+            break;
+        case "V":
+            alert(`Bom Tarde!`)
+            break;
+        case "N":
+            alert(`Boa Noite!`)
+            default:
+                alert(`valor Inválido!`)
+    };
+>>>>>>> 922bc235e7ee3caba2c9add626f10ac986aab262
 
 </script>
