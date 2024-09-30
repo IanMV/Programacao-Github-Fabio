@@ -20,25 +20,33 @@
     let suspeita = 0;
 
     //PROCESSAMENTO
-    if (telefone == "SIm") {
-        suspeita = suspeita + 1;
+    switch (telefone) {
+        case "SIM":
+            suspeita = suspeita + 1
     };
-    if (local == "SIm") {
-        suspeita = suspeita + 1;
+    switch (local) {
+        case "SIM":
+            suspeita = suspeita + 1
     };
-    if (semTeto == "SIM") {
-        suspeita = suspeita + 1;
+    switch (semTeto) {
+        case "SIM":
+            suspeita = suspeita + 1
     };
-    if (caloteiro == "SIM") {
-        suspeita = suspeita + 1;
+    switch (caloteiro) {
+        case "SIM":
+            suspeita = suspeita + 1
     };
-    if (clt == "SIM") {
-        suspeita = suspeita + 1;
+    switch (clt) {
+        case "SIM":
+            suspeita = suspeita + 1
     };
 
     //SAÍDA
     switch (suspeita) {
         case 0:
+            alert("Você é inocente.");
+            break;
+        case 1:
             alert("Você é inocente.");
             break;
         case 2:

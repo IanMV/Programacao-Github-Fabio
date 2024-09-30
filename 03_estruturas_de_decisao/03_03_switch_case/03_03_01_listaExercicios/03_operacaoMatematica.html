@@ -9,9 +9,9 @@
     */
 
     //ENTRADA
-    const numeroUm = Number(prompt("Diga um número"));
-    const numeroDois = Number(prompt("Diga um número"));
-    const operacao = prompt("Diga uma operacao matematica");
+    const numeroUm = Number(prompt("Diga um número."));
+    const numeroDois = Number(prompt("Diga outrp número."));
+    const operacao = prompt("Diga uma operação matemática. (x-Multiplicacção +-Adição --Subtração /-Divisão)").trim();
 
     //PROCESSAMENTO
     let calculo;
@@ -57,10 +57,14 @@
             break;
     };
 
-    if (calculo < 0) {
-        positivo = "negativo"
-    } else {
-        positivo = "positivo"
+    switch (calculo < 0) {
+        case true:
+            positivo = "negativo"
+            break;
+
+        case false:
+            positivo = "positivo"
+            break;
     };
 
     //SAÍDA

@@ -7,8 +7,8 @@
     */
 
     //ENTRADA
-    const hemisferio = prompt("Diga em qual hemisfério você vive: (norte-N | sul-S)").toUpperCase();
-    const mesAtual = prompt("Diga em qual mês você está: (em números)");
+    const hemisferio = prompt("Diga em qual hemisfério você vive: (norte-N | sul-S)").toUpperCase().trim();
+    const mesAtual = Number(prompt("Diga em qual mês você está: (em números)"));
     let estacao;
 
     //PROCESSAMENTO
@@ -35,6 +35,9 @@
                 case 12:
                     estacao = "outono";
                     break;
+                default:
+                    alert(`Só existem 12 meses.`)
+                    break;
             }
             break;
 
@@ -60,10 +63,15 @@
                 case 12:
                     estacao = "primavera";
                     break;
+                default:
+                    alert(`Só existem 12 meses.`)
+                    break;
+                    
             }  break;
+            
     };
 
     //SAÍDA
-    alert(`A estação é ${estacao}`);
-  
+    alert(`A estação é ${estacao}.`);
+
 </script>
