@@ -14,12 +14,31 @@
     Apresente em tela o cargo do usuário e também o valor final recebido pelas viagens realizadas.
     */
 
-    //ENTRADA
+    // ENTRADA
+    const cargo = prompt("Qual o seu cargo (Motorista ou Cobrador)?").trim().toLowerCase();
+    const viagens = Number(prompt("Quantas viagens foram realizadas no dia?"));
 
+    // PROCESSAMENTO
+    const valorDiaria = 100.00;
+    let adicional = 0.00;
 
-    //PROCESSAMENTO
+    if (cargo === "motorista") {
+        if (viagens <= 10) {
+            adicional = valorDiaria * 0.20;
+        } else {
+            adicional = valorDiaria * 0.35; 
+        }
+    } else if (cargo === "cobrador") {
+        if (viagens > 10) {
+            adicional = valorDiaria * 0.10;
+        }
+    } else {
+        alert("Cargo inválido! Por favor, insira 'Motorista' ou 'Cobrador'.");
+    };
 
-    
-    //SAÍDA
+    const valorFinal = valorDiaria + adicional;
+
+    // SAÍDA
+    alert(`Cargo: ${cargo.charAt(0).toUpperCase() + cargo.slice(1)}\nValor final recebido: R$ ${valorFinal.toFixed(2)}`);
 
 </script>

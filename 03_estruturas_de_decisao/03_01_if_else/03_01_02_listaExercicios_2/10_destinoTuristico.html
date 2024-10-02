@@ -11,12 +11,30 @@
     Apresente o destino final e o custo final da viagem para o destino.
     */
 
-    //ENTRADA
+    // ENTRADA
+    const precoTransporteSP = Number(prompt("Informe o preço do transporte aéreo para São Paulo: "));
+    const precoTransporteRJ = Number(prompt("Informe o preço do transporte aéreo para o Rio de Janeiro: "));
+    const precoHotelSP = Number(prompt("Informe o preço do hotel em São Paulo por dia: "));
+    const precoHotelRJ = Number(prompt("Informe o preço do hotel no Rio de Janeiro por dia: "));
+    const diasEstadia = Number(prompt("Quantos dias pretende ficar no destino? "));
 
+    // PROCESSAMENTO
+    const custoFinalSP = precoTransporteSP + (precoHotelSP * diasEstadia);
+    const custoFinalRJ = precoTransporteRJ + (precoHotelRJ * diasEstadia);
 
-    //PROCESSAMENTO
+    let destinoFinal;
+    let custoFinal;
 
-    
-    //SAÍDA
+    if (custoFinalSP < custoFinalRJ) {
+        destinoFinal = "São Paulo";
+        custoFinal = custoFinalSP;
+    } else {
+        destinoFinal = "Rio de Janeiro";
+        custoFinal = custoFinalRJ;
+    }
+
+    // SAÍDA
+    alert(`Destino escolhido: ${destinoFinal}`);
+    alert(`Custo final da viagem: R$ ${custoFinal.toFixed(2)}`);
 
 </script>
