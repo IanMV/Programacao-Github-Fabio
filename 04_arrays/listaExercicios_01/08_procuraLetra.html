@@ -9,11 +9,29 @@
     */
 
     //ENTRADA
+    const palavra = prompt("Digite uma palavra.").trim().toLowerCase();
+    const letra = prompt("Qual letra deseja encontrar?").trim().toLowerCase();
 
 
     //PROCESSAMENTO
+    const lista2 = Array.from(palavra)
+    const posicao = lista2.indexOf(letra);
+    const ultimaPosicao = lista2.lastIndexOf(letra);
+    let existe;
 
+    if (posicao >= 0) {
+        if (ultimaPosicao == posicao) {
+            existe = "Essa letra existe na palavra e ela é a "+ (Number(posicao) + 1) + "° letra da palavra."  ;
+        } else {
+            existe = "Essa letra existe na palavra e a sua primeira posição na palavra é em " + (Number(posicao) + 1) + "°.";
+        };
+    } else {
+        existe = "Essa letra não existe na palavra.";
+    };
+    
 
     //SAÍDA
+    alert(existe);
+
 
 </script>

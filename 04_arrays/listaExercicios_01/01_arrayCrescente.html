@@ -9,11 +9,29 @@
     //ENTRADA
     const num1 = prompt("Insira um número.");
     const num2 = prompt("Insira um número.");
+    let ordem1;
+    let ordem2;
+
 
     //PROCESSAMENTO
-    const numeros = [num1, num2]
+    if (num1 != num2) {
+        if (num1 > num2) {
+            ordem1 = num1;
+            ordem2 = num2;
+        } else if (num2 > num1) {
+            ordem1 = num2;
+            ordem2 = num1;
+        };
+    } else {
+        ordem1 = num1;
+        ordem2 = num2;
+    };
+
+    const lista = [ordem2, ordem1]
+
 
     //SAÍDA
-    document.write( `${numeros}` )
+    alert(lista.join(" - "));
+    
 
 </script>

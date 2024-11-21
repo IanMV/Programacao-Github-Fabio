@@ -7,11 +7,44 @@
     */
 
     //ENTRADA
+    const num1 = prompt("Insira um número.");
+    const num2 = prompt("Insira um número.");
+    const num3 = prompt("Insira um número.");
+    let ordem1;
+    let ordem2;
+    let ordem3;
 
 
     //PROCESSAMENTO
+    if (num1 > num2 && num1 > num3) {
+        ordem1 = num1;
+    } else if (num1 < num2 && num1 < num3) {
+        ordem3 = num1;
+    } else {
+        ordem2 = num1;
+    };
+
+    if (num2 > num1 && num2 > num3) {
+        ordem1 = num2;
+    } else if (num2 < num1 && num2 < num3) {
+        ordem3 = num2;
+    } else {
+        ordem2 = num2;
+    };
+
+    if (num3 > num2 && num3 > num1) {
+        ordem1 = num3;
+    } else if (num3 < num2 && num3 < num1) {
+        ordem3 = num3;
+    } else {
+        ordem2 = num3;
+    };
+
+    const lista = [ordem1, ordem2, ordem3]
 
 
     //SAÍDA
+    alert(lista.join(" - "));
+
 
 </script>

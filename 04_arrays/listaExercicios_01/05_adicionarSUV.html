@@ -9,11 +9,17 @@
     */
 
     //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const carrosSUVantiga = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const adicionar = prompt(carrosSUVantiga.join(" - ") + "\n\nAdicione um carro nesta lista.").trim();
 
 
     //PROCESSAMENTO
+    carrosSUV.push(adicionar);
 
 
     //SAÍDA
+    alert("Lista antiga:\n" + carrosSUVantiga.join(" - ") + "\n\nNova lista:\n" + carrosSUV.join(" - "));
 
+    
 </script>
