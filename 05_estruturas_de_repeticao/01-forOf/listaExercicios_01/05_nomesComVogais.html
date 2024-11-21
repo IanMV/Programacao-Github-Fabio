@@ -10,18 +10,34 @@
     let listaVogal = [];
     let posicao;
 
+
     //PROCESSAMENTO
     for (nome of listaDeNomes) {
-        posicao = nome.indexOf( "E");
+        posicao = nome.indexOf("A");
         if (posicao == 0) {
             listaVogal.push(nome)
         };
-
-        console.log(posicao)
-    }
+        posicao = nome.indexOf("E");
+        if (posicao == 0) {
+            listaVogal.push(nome)
+        };
+        posicao = nome.indexOf("I");
+        if (posicao == 0) {
+            listaVogal.push(nome)
+        };
+        posicao = nome.indexOf("O");
+        if (posicao == 0) {
+            listaVogal.push(nome)
+        };
+        posicao = nome.indexOf("U");
+        if (posicao == 0) {
+            listaVogal.push(nome)
+        };
+    };
 
 
     //SAÍDA
-    alert(listaVogal)
+    alert(listaVogal);
+
 
 </script>
