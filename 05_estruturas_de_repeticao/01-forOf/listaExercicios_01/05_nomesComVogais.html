@@ -15,29 +15,29 @@
     for (nome of listaDeNomes) {
         posicao = nome.indexOf("A");
         if (posicao == 0) {
-            listaVogal.push(nome)
+            listaVogal.push(nome);
         };
         posicao = nome.indexOf("E");
         if (posicao == 0) {
-            listaVogal.push(nome)
+            listaVogal.push(nome);
         };
         posicao = nome.indexOf("I");
         if (posicao == 0) {
-            listaVogal.push(nome)
+            listaVogal.push(nome);
         };
         posicao = nome.indexOf("O");
         if (posicao == 0) {
-            listaVogal.push(nome)
+            listaVogal.push(nome);
         };
         posicao = nome.indexOf("U");
         if (posicao == 0) {
-            listaVogal.push(nome)
+            listaVogal.push(nome);
         };
     };
 
 
     //SAÍDA
-    alert(listaVogal);
+    alert("Lista de nomes original:\n" + listaDeNomes.join(", ") + "\n\nLista em ordem alfabética de nomes que começam com vogal:\n" + listaVogal.sort().join(", "));
 
 
 </script>

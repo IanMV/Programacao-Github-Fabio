@@ -15,12 +15,12 @@
     for (numero of listaDeNumeros) {
         par = (Math.floor(numero / 2) * 2) - numero;
         if (par == 0) {
-            listaPar.push(numero)
+            listaPar.push(numero);
         }
         console.log(par);
     };
 
     //SAÍDA
-    alert("Lista crescente só com números pares: " + listaPar.sort((a, b) => a - b).join(" - "));
+    alert("Lista original:\n" + listaDeNumeros.join(" - ") + "\n\nLista crescente só com números pares:\n" + listaPar.sort((a, b) => a - b).join(" - "));
 
 </script>

@@ -10,18 +10,21 @@
     let masculino = [];
     let feminino = [];
     let sexo;
+    let erro = "";
 
     //PROCESSAMENTO
     for (nome of listaDeNomes) {
         sexo = prompt(nome + "\n\nEsse nome é masculino ou feminino? (M - masculino, F - feminino)").toLowerCase();
         if (sexo == "m") {
             masculino.push(nome);
-        } else {
+        } else if (sexo == "f") {
             feminino.push(nome);
-        };
+        } else {
+erro = "Algun(s) nome(s) não foi(ram) respondido(s) corretamente com M e F!"
+        }
     }
 
     //SAÍDA
-    alert("Nomes masculino: " + masculino + "\n\nNomes femininos: " + feminino);
+    alert("Nomes masculino:\n" + masculino.join(", ") + "\n\nNomes femininos:\n" + feminino.join(", ") + "\n\n " +erro);
 
 </script>

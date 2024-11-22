@@ -14,11 +14,11 @@
   for (numero of listaDeItens) {
         par = (Math.floor(numero / 2) * 2) - numero;
         if (par == 0) {
-            listaPar.push(numero)
+            listaPar.push(numero);
         }
         console.log(par);
     }
 
     //SAÍDA
-    alert("Lista só com os números pares: " + listaPar.sort((a, b) => a - b).join(" - ") + "." + "\nExistem " + listaPar.length + " numeros pares nessa lista. \nNa lista original existiam " + listaDeItens.length + " itens." );
+    alert( "Lista original:\n"+ listaDeItens.join(" - ") + "\n\nLista só com os números pares:\n" + listaPar.sort((a, b) => a - b).join(" - ") + "." + "\n\nExistem " + listaPar.length + " números pares nessa lista. \n\nNa lista original existiam " + listaDeItens.length + " itens." );
 </script>

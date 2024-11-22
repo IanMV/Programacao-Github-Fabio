@@ -7,22 +7,23 @@
 
     //ENTRADA
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
-    let posicao;
+    let listaJoao = [];
+    let joao;
 
 
     //PROCESSAMENTO
     for (nome of listaDeNomes) {
-        posicao = listaDeNomes.indexOf(nome);
+        joao = nome;
         nome = nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         nome = nome.indexOf("joao");
-        if (nome == -1) {
-            listaDeNomes.splice(posicao, 1);
+        if (nome >= 0) {
+            listaJoao.push(joao);
         };
     };
 
 
     //SAÍDA
-    alert(listaDeNomes);
+    alert( "Lista original:\n" + listaDeNomes.join(", ") + "\n\nLista só com joões:\n" + listaJoao.join(", "));
 
 
 </script>

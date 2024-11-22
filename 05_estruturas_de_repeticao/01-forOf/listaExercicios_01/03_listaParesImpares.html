@@ -15,13 +15,13 @@
     for (numero of listaDeNumeros) {
         par = (Math.floor(numero / 2) * 2) - numero;
         if (par == 0) {
-            listaPar.push(numero)
+            listaPar.push(numero);
         } else {
-            listaImpar.push(numero)
+            listaImpar.push(numero);
         }
         console.log(par);
     }
 
     //SAÍDA
-    alert("Lista crescente só com números pares: " + listaPar.sort((a, b) => a - b).join(" - ") + "\n\nLista decrescente: " + listaImpar.sort((a, b) => b - a).join(" - "));
+    alert("Lista original:\n" + listaDeNumeros.join(" - ") + "\n\nLista crescente só com números pares:\n" + listaPar.sort((a, b) => a - b).join(" - ") + "\n\nLista decrescente só com números impares:\n" + listaImpar.sort((a, b) => b - a).join(" - "));
 </script>
