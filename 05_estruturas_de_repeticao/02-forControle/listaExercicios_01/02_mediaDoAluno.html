@@ -7,11 +7,16 @@
     */
 
     //ENTRADA
-    
+    let notas = prompt("Quantas notas o aluno teve?");
+    let nota;
+    let total = 0;
 
     //PROCESSAMENTO
-    
+    for (let perguntas = 0 ; notas > perguntas ; nota = Number(prompt("Quanto ele tirou essa nota?")), perguntas ++, total = total + nota ) {};
+
+    total = total / notas;    
 
     //SAÍDA
+    alert(total);
 
 </script>

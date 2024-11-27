@@ -5,11 +5,19 @@
     */
 
     //ENTRADA
+    let fibonacci = [0, 1];
+    let n = Number(prompt("quantos números deseja ver na sequencia de fibonacci?"));
+
 
 
     //PROCESSAMENTO
 
+    for (let total = 2; total < n; total++,fibonacci.push(fibonacci.at(-1) + fibonacci.at(-2))) {};
+
+
+
 
     //SAÍDA
+    alert(fibonacci);
 
 </script>
