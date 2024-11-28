@@ -6,11 +6,23 @@
     */
 
     //ENTRADA
-
+    const num = Number(prompt("Diga um número."));
+    let conta;
+    let primo;
 
     //PROCESSAMENTO
-
-
+    for(let contador = 0, dividendo = 2; contador < 10; contador++, dividendo++) {
+        if (num != dividendo) {
+            conta = num / dividendo;
+            if (Math.floor(conta) == conta) {
+                primo = "É primo";
+            };
+        };
+        console.log(conta)
+        
+    };
     //SAÍDA
+    alert(primo);
+
 
 </script>
