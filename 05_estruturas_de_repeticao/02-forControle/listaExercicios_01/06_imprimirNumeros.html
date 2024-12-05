@@ -6,11 +6,31 @@
     */
 
     //ENTRADA
+    const num1 = Number(prompt("Informe o número inicial.").trim());
+    const num2 = Number(prompt("Inforome o número final.").trim());
+    let erro = "";
 
-    
     //PROCESSAMENTO
+    let impares = [];
+    let pares = [];
+    if (num1 >= num2) {
+        erro = "ERRO."
+    } else {
+        for (let contador = num1 + 1; contador < num2; contador++) {
+            console.log(contador)
+            if (contador % 2 != 0) {
+                impares.push(contador);
+            } else {
+                pares.push(contador);
+            };
+        };
+    };
 
-    
     //SAÍDA
+    if (erro == "ERRO") {
+        alert(erro)
+    } else {
+        alert("Números pares entre o número final e inicial:\n" + pares.join(" - ") + "\n\nNúmeros impares entre o número final e inicial:\n" + impares.join(" - "));
+    };
 
 </script>

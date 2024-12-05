@@ -7,16 +7,16 @@
     */
 
     //ENTRADA
-    let notas = prompt("Quantas notas o aluno teve?");
+    let notas = Number(prompt("Quantas notas o aluno teve?").trim());
     let nota;
     let total = 0;
 
     //PROCESSAMENTO
-    for (let perguntas = 0 ; notas > perguntas ; nota = Number(prompt("Quanto ele tirou essa nota?")), perguntas ++, total = total + nota ) {};
+    for (let perguntas = 0 ; notas > perguntas ; nota = Number(prompt("Quanto ele tirou essa nota?").trim()), perguntas ++, total = total + nota ) {};
 
     total = total / notas;    
 
     //SAÍDA
-    alert(total);
+    alert("A média desse aluno é " + total);
 
 </script>

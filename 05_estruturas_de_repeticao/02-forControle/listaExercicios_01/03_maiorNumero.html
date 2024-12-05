@@ -12,11 +12,11 @@
 
     //PROCESSAMENTO
     for (let perguntas = 0; perguntas < 5; perguntas++ ) {
-        num = prompt("Diga um número.");
+        num = Number(prompt("Diga um número."));
         lista.push(num);
     };
 
     //SAÍDA
-   alert("O maior número informado é " +lista.sort((a, b) => b - a).join(" - ")[0]);
+   alert("O maior número informado é " + lista.sort((a, b) => b - a).join(" - ")[0]);
 
 </script>

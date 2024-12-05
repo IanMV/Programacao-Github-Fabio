@@ -6,11 +6,21 @@
     */
 
     //ENTRADA
-
+    let A = 80000;
+    let B = 200000;
+   let contador = 0;
 
     //PROCESSAMENTO
-
+    while (A < B) {
+        A *= 1.03;
+        B *= 1.015;
+        contador += 1;
+        console.log(A);
+        console.log(B);
+    };
+    
 
     //SAÍDA
+    alert("O números de anos em que o país A ultrapassa o país B no número de habitantes é " + contador + " anos");
 
 </script>

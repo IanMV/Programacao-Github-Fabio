@@ -5,24 +5,44 @@
     Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
     */
 
+
+
+    /*ALERTA: NÚMEROS MUITO GRADES PODEM CAUSAR PROBLEMAS DE TRAVAMENTO QuANDO USADO A VARIAVEL NUM COMO SINAL DE FOR PARAR A REPETIÇÃO*/
+
     //ENTRADA
-    const num = Number(prompt("Diga um número."));
+    const num = Number(prompt("Diga um número.").trim());
     let conta;
-    let primo;
+    let primo = true;
+    let primoSim;
 
     //PROCESSAMENTO
-    for(let contador = 0, dividendo = 2; contador < 10; contador++, dividendo++) {
+    for (let contador = 2, dividendo = 2; contador < 11 /*ou pode usar num  (pode causar travamento com números muito grandes), sem precisar usar o IF de verificação*/; contador++, dividendo++) {
         if (num != dividendo) {
             conta = num / dividendo;
             if (Math.floor(conta) == conta) {
-                primo = "É primo";
+                primo = false;
             };
-        };
-        console.log(conta)
-        
+            if (primo != false) {
+                primoSim = "É primo.";
+            };
+            if (primo == false) {
+                primoSim = "Não é primo";
+            };
+        }
+        console.log(conta);
     };
+    if (num == 2 || num == 1) {
+        primoSim = "É primo."
+    };
+    if (num == 0) {
+        primoSim = "Não é primo"
+    };
+
+
     //SAÍDA
-    alert(primo);
+    alert(primoSim);
+
+
 
 
 </script>

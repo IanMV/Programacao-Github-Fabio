@@ -6,11 +6,20 @@
     */
 
     //ENTRADA
-
-    
+ let popu5;
+ let popu10;
     //PROCESSAMENTO
-    
+    for (contador = 1, popu = 50000; contador < 11;  contador++) {
+        console.log(contador);
+        popu = Math.round(popu * 1.015);
+        if (contador == 5) {
+            popu5 = popu / 1000;
+        } else if (contador == 10) {
+            popu10 = popu / 1000;
+        };
+    };
 
     //SAÍDA
+    alert("A população atingirá " + popu5 + " habitantes em 5 anos e " + popu10 + " em 10 anos");
 
 </script>

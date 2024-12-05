@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: MÚLTIPLOS DE 3
@@ -6,10 +7,18 @@
 
     //ENTRADA
 
-
+    let lista = []
     //PROCESSAMENTO
-
+    for (multiplo = 3; multiplo < 100; (multiplo += 3)) {
+        lista.push(multiplo);
+    };
+    console.log(lista);
+    let soma = 0;
+    for (num of lista) {
+        soma += num;
+    };
+    
 
     //SAÍDA
-
+    alert("Os multiplos de três são:\n" + lista  + "\n\nE a soma deles é:\n" + soma);
 </script>

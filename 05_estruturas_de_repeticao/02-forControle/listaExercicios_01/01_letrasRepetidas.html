@@ -11,16 +11,40 @@
 
     //ENTRADA
     let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-
-
+    let letras = [""];
+    let positivo;
 
 
     //PROCESSAMENTO
-    for (let i = 0; i < letra.length; i++) {
-        const element = array[i];
-
+    /*for (letra of listaDeLetras) {
+        for (let letra2 of letras) {
+            if (letra.toLowerCase() !== letra2) {
+                positivo = true;
+            } else {
+                positivo = false;
+            };
+        };
+        if (positivo == true) {
+            letras.push(letra.toLowerCase());
+        };
     };
+    letras.shift();*/
+
+    for (let letra = 0; letra < array.length; letra++) {
+        const posicao = listaDeLetras[letra];
+        for (let letra2 = 0; letra2 < array.length; letra2++) {
+            const posicao2 = letras[letra2];
+            
+        }
+        if (posicao) {
+            
+        }
+        
+    }
+
+
 
     //SAÍDA
+    alert(letras);
 
 </script>

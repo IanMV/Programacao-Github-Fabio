@@ -1,23 +1,36 @@
+<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: INVESTIMENTOS
     Joãozinho investiu R$ 1.000,00 e o investimento renderá 2% por dia útil. Quantos dias demorará para que Joãozinho consiga o total de R$ 2.000,00.
     */
-
-    //ENTRADA
-    let fibonacci = [0, 1];
-    let n = Number(prompt("quantos números deseja ver na sequencia de fibonacci?"));
-
-
-
+    
+     //ENTRADA
+    
+    
     //PROCESSAMENTO
-
-    for (let total = 2; total < n; total++,fibonacci.push(fibonacci.at(-1) + fibonacci.at(-2))) {};
-
-
+    for (contador = 0, investimento = 1000, pergunta = 0; investimento < 2000; contador++) {
+        investimento *= 1.02;
+    };
+    
 
 
     //SAÍDA
-    alert(fibonacci);
+    alert("Para alcançar 2 mil reais demorará " + contador + " dias");
+    /*Easter egg
+    //ENTRADA
+    let fibonacci = [0, 1];
+    let n = Number(prompt("Quantos números deseja ver na sequencia de fibonacci?").trim());
+
+    //PROCESSAMENTO
+    for (let total = 2; total < n; total++,fibonacci.push(fibonacci.at(-1) + fibonacci.at(-2))) {};
+    if (n == 0 ) {
+        fibonacci = "";
+    } else if (n == 1 ) {
+        fibonacci = 0;
+    };
+
+    //SAÍDA
+    alert(fibonacci);*/
 
 </script>

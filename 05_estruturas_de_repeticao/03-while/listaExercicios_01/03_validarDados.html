@@ -13,8 +13,33 @@
     //ENTRADA
 
 
-    //PROCESSAMENTO
 
+
+    //PROCESSAMENTO
+    let nome = prompt("Diga o seu nome.").trim();
+    while (nome.length < 3) {
+        nome = prompt("Diga o seu nome.").trim();
+    };
+
+    let idade = Number(prompt("Diga a sua idade.").trim());
+    while (idade < 0 || idade > 150 || isNaN(idade)) {
+        idade = Number(prompt("Diga a sua idade.").trim());
+    };
+
+    let salario = prompt("Diga o seu salario.").trim();
+    while (salario < 0 || isNaN(salario)) {
+        salario = prompt("Diga o seu salario.").trim();
+    };
+
+    let sexo = prompt("Diga o seu sexo.").trim().toLowerCase();
+    while (sexo != ("m"),("f") || isNaN(idade)) {
+        sexo = prompt("Diga o seu sexo.").trim().toLowerCase();
+    };
+
+    let estadoCivil = prompt("Diga o seu Estado Civil.").trim().toLowerCase();
+    while (estadoCivil != "s","c","v","d" || isNaN(idade)) {
+        estadoCivil = prompt("Diga o seu Estado Civil.").trim().toLowerCase();
+    };
 
     //SAÍDA
 

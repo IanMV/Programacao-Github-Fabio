@@ -8,11 +8,36 @@
     */
 
     //ENTRADA
-
+    const can1 = prompt("Diga o nome do candidato.").trim().toLowerCase();
+    const can2 = prompt("Diga o nome do candidato.").trim().toLowerCase();
+    const can3 = prompt("Diga o nome do candidato.").trim().toLowerCase();
+    const alunos = Number(prompt("Quantos alunos vão votar?").trim());
+    let voto;
+    let voto1 = 0;
+    let voto2 = 0;
+    let voto3 = 0;
+    let porcen1;
+    let porcen2;
+    let porcen3;
 
     //PROCESSAMENTO
+    for (let contador = 0; contador < alunos; contador++) {
+        voto = prompt("Em quem vai votar?\n\n" + can1 + " - " + can2 + " - " + can3).trim();
+        if (voto == can1) {
+            voto1 ++
+        } else if (voto == can2) {
+            voto2 ++
+        } else if (voto == can3) {
+            voto3 ++
+        };
+
+    };
+   porcen1 = (voto1 / alunos) * 100;
+   porcen2 = (voto2 / alunos) * 100;
+   porcen3 = (voto3 / alunos) * 100;
 
 
     //SAÍDA
-
+    alert(can1 + ": " + " votos: " + voto1 + ", porcentagem: " + porcen1.toFixed()+"%" + "\n\n" + can2 + ": " + " votos: " + voto2 + ", porcentagem: " + porcen2.toFixed()+"%" + "\n\n" + can3 + ": " + " votos: " + voto3 + ", porcentagem: " + porcen3.toFixed() +"%"
+    );
 </script>

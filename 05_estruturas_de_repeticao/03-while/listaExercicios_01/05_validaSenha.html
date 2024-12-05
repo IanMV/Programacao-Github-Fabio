@@ -6,7 +6,10 @@
     */
 
     //ENTRADA
-
+    let senha = Number(("Crie uma senha de 4 números."));
+    while (senha.length > 4 || senha.length < 4 || isNaN(senha)) {
+        senha = Number(prompt("Crie uma senha de 4 números."));
+    };
 
     //PROCESSAMENTO
 
