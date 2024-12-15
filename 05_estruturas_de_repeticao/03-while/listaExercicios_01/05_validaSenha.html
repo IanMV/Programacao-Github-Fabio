@@ -6,9 +6,15 @@
     */
 
     //ENTRADA
-    let senha = Number(("Crie uma senha de 4 números."));
+    let senha = Number(prompt("Crie uma senha de 4 números😂.").trim());
+
     while (senha.length > 4 || senha.length < 4 || isNaN(senha)) {
         senha = Number(prompt("Crie uma senha de 4 números."));
+        console.log(senha.length);
+    };
+    let login = Number(prompt("Qual é a senha?").trim());
+    while (senha !== login) {
+        let login = Number(prompt("Qual é a senha?😂").trim());
     };
 
     //PROCESSAMENTO

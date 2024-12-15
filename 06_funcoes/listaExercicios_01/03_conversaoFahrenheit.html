@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-
+    let temperatura = Number(prompt("Converta Celsius para Fahrenheit.").trim());
 
     //PROCESSAMENTO
-
+    function Converte() {
+       return ((9 * temperatura + 160) / 5).toFixed(2);
+    };
 
     //SAÍDA
+    alert(`Essa temperatura Celsius em Fahrenheit é ${Converte()}°.`);
 
 </script>

@@ -8,11 +8,18 @@
     */
 
     //ENTRADA
-
+    let raio = Number(prompt("Qual é o raio do circulo?").trim());
 
     //PROCESSAMENTO
-
+    function Calculos(r) {
+        let circulo = {
+           a: (Math.PI * (r * r)).toFixed(2),
+           p: (2 * Math.PI * r).toFixed(2)
+        };
+        return circulo;
+    };
 
     //SAÍDA
+    alert(`A área do circulo é ${Calculos(raio).a} e seu perímetro é ${Calculos(raio).p}.`);
 
 </script>

@@ -7,11 +7,17 @@
     */
 
     //ENTRADA
-
+    let nome = prompt("Informe seu nome.").trim();
 
     //PROCESSAMENTO
-
+    function Formatar(nome) {
+        nome = nome.split("");
+        letras = nome.splice(1).join("").toLowerCase();
+        letra = nome[0].toUpperCase();
+        return letra + letras;
+    };
 
     //SAÍDA
-    
+    alert(`Bom dia, ${Formatar(nome)}!`);
+
 </script>

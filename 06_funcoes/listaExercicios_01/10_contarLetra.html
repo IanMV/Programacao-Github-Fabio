@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
+    let palavra = prompt("Informe uma palavra.").trim();
+    let letra = prompt("Informe uma letra.").trim();
 
     //PROCESSAMENTO
-
+    function aparicoes(palavra, letra) {
+        palavra = palavra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split("");
+        let contagem = 0;
+        for (letras of palavra) {
+            if (letras == letra) {
+                contagem += 1;
+            };
+        };
+        return contagem;
+    };
 
     //SAÍDA
+    alert(`A letra "${letra}" aparece ${aparicoes(palavra, letra)} vez(es) na palavra ${palavra}.`);
 
 </script>

@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
+    let altura = Number(prompt("Qual é a altura do triângulo?").trim());
+    let base = Number(prompt("Qual é a base do triângulo?").trim());
 
     //PROCESSAMENTO
-
+    function Calculo(h, b) {
+        return ((b * h) / 2).toFixed(2);
+    };
 
     //SAÍDA
+    alert(`A área do triângulo é ${Calculo(altura, base)}`);
 
 </script>

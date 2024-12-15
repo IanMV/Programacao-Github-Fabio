@@ -71,7 +71,7 @@ Considere, então, que o programa perguntará ao aluno qual foi sua nota na prov
     situacaoAluno(mediaAluno, mediaAprovacao);
 ```
 
-> Existem os parâmetros e os argumentos da funçãio. Os parâmetros são, propriamente, os nomes das variáveis - neste caso, _mediaAluno_ e _mediaAprovacao_. Os argumentos são os valores atribuídos para esses parâmetros. Assim, quando chamamos a função, passando os valores 10 e 6, estamos passando os argumentos para os parâmetros _mediaAluno_ e _mediaAprovacao_.
+> Existem os parâmetros e os argumentos da função. Os parâmetros são, propriamente, os nomes das variáveis - neste caso, _mediaAluno_ e _mediaAprovacao_. Os argumentos são os valores atribuídos para esses parâmetros. Assim, quando chamamos a função, passando os valores 10 e 6, estamos passando os argumentos para os parâmetros _mediaAluno_ e _mediaAprovacao_.
 
 # [Avançar - Funções com retorno](../02_retorno/README.md)
 

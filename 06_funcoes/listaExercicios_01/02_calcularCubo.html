@@ -6,11 +6,20 @@
     */
 
     //ENTRADA
-
+    let numero = Number(prompt("Informe um número.").trim());
 
     //PROCESSAMENTO
-
+    function Cubo() {
+        return numero * numero * numero;
+    };
+    let cubo = Cubo();
 
     //SAÍDA
+    if (false == isNaN(numero)) {
+        alert(`o cubo do ${numero} é ${cubo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}.`);
+    } else {
+        alert(`erro`)
+    };
+    
 
 </script>

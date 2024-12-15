@@ -7,11 +7,14 @@
     */
 
     //ENTRADA
-
+    let palavra = prompt("Informe uma palavra.").trim();
 
     //PROCESSAMENTO
-
+    function Contagem(a) {
+        return a.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split("").filter(letra => letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u").length;
+    };
 
     //SAÍDA
+    alert(`A palavra ${palavra} tem ${Contagem(palavra)} vogais.`);
 
 </script>

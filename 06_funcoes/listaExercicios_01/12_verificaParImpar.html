@@ -5,11 +5,21 @@
     */
 
     //ENTRADA
-
+    let numero = Number(prompt("Informe um número.").trim());
 
     //PROCESSAMENTO
-
+    function parImpar(numero) {
+        if (numero % 2 == 0) {
+            return true;
+        };
+        return false;
+    };
 
     //SAÍDA
+    if (parImpar(numero) == true) {
+        alert(`O número ${numero} é par.`);
+    } else {
+        alert(`O número ${numero} é ímpar.`);
+    };
 
 </script>

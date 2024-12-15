@@ -20,11 +20,37 @@
     */
 
     //ENTRADA
+    let entrada = Number(prompt("Candidato e seu número:\nJoãozinho: 24\nMariazinha: 69\n\nPara votar branco aperte: 1 \n\nEm quem deseja votar?").trim());
 
 
     //PROCESSAMENTO
+    let nulo = 0;
+    let joao = 0;
+    let maria = 0;
+    let branco = 0;
+    while (entrada != 0) {
+        entrada = Number(prompt("Em quem deseja votar?").trim());
+        if (entrada == 69) {
+            maria += 1;
+        }
+        if (entrada == 24) {
+            joao += 1;
+        } if (entrada != 69 && entrada != 24 && entrada != 1) {
+            nulo += 1;
+        } if (entrada == 1) {
+            branco += 1;
+        }
+
+
+    }
+    const total = maria + joao + nulo + branco;
+    const nuloPor = (nulo / total * 100).toFixed(2);
+    const mariaPor = (maria / total * 100).toFixed(2);;
+    const joaoPor = (joao / total * 100).toFixed(2);;
+    const brancoPor =( branco / total * 100).toFixed(2);;
 
 
     //SAÍDA
+    alert(`Porcentagem dos votos:\nNulos${nuloPor}%\nBrancos${brancoPor}%\nJoãozinho${joaoPor}%\nMariazinha${mariaPor}%`);
 
 </script>
