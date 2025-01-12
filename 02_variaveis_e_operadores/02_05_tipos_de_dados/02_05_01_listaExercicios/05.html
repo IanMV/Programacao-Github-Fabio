@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
+    let preco = Number(prompt(`Informe o preço:`).trim());
+    let porcentagem = Number(prompt(`Informe a porcentagem de desconto no preço:`).trim());
 
-    
     //PROCESSAMENTO
+    let calculo = ((preco * porcentagem) / 100) - preco;
 
-    
     //SAÍDA
+    alert(`o preço antigo era ${preco} real(is) e teve um aumento de ${porcentagem}%, agora é ${calculo} real(is)!`);
 
 </script>

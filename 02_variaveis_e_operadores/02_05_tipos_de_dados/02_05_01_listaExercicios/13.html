@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+    //PROBLEMA
+    //Salário líquido
+    //Peça para o usuário informar quantas horas trabalha no mês e quantos que recebe por hora trabalhada.Calcule o salário líquido considerando os seguintes descontos:
+    // INSS: 8 % do salário bruto
+    // IR: 11 % do salário bruto
+
+    //ENTRADA
+    const horas = prompt("Quantas horas você trabalha no mês?");
+    const porHora = prompt("Quanto você recebe por hora?");
+
+    //PROCESSAMENTO
+    const calculoSalario = horas * porHora;
+    const calculo1 = calculoSalario * 0.08;
+    const calculo2 = calculoSalario * 0.11;
+    const calculoMaster = calculoSalario - calculo1 - calculo2;
+
+    //SAÍDA
+    alert(`Você ganhará ${calculoMaster} reais.`);
+
+</script>

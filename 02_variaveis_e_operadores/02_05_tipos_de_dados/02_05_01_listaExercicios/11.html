@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
+    const dias = prompt("Informe a quantidade de dias que o carro foi alugado:");
+    const km = prompt("Informe os km rodados:");
     
     //PROCESSAMENTO
+    const calculo = dias * 60;
+    const calculo2 = km * 0.15;
+    const calculo3 = Number(calculo) + Number(calculo2);
 
-    
     //SAÍDA
+    alert(`O preço do aluguel custou ${calculo3} reais.`);
 
 </script>

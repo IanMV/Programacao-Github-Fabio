@@ -32,22 +32,22 @@
         entrada = Number(prompt("Em quem deseja votar?").trim());
         if (entrada == 69) {
             maria += 1;
-        }
+        };
         if (entrada == 24) {
             joao += 1;
-        } if (entrada != 69 && entrada != 24 && entrada != 1) {
+        };
+        if (entrada != 69 && entrada != 24 && entrada != 1) {
             nulo += 1;
-        } if (entrada == 1) {
+        };
+        if (entrada == 1) {
             branco += 1;
-        }
-
-
-    }
+        };
+    };
     const total = maria + joao + nulo + branco;
     const nuloPor = (nulo / total * 100).toFixed(2);
-    const mariaPor = (maria / total * 100).toFixed(2);;
-    const joaoPor = (joao / total * 100).toFixed(2);;
-    const brancoPor =( branco / total * 100).toFixed(2);;
+    const mariaPor = (maria / total * 100).toFixed(2);
+    const joaoPor = (joao / total * 100).toFixed(2);
+    const brancoPor = (branco / total * 100).toFixed(2);
 
 
     //SAÍDA

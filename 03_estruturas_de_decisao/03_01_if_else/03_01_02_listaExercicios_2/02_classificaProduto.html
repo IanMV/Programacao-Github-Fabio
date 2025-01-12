@@ -13,11 +13,25 @@
     */
 
     //ENTRADA
-
+    let classi = prompt("Informe o código do produto.").trim();
 
     //PROCESSAMENTO
+    if (classi == 1) {
+        alert("Alimento não-perecível.");
+    } else if (classi == 2 || classi == 3 || classi == 4) {
+        alert("Alimento perecívell.");
+    } else if (classi == 5 || classi == 6) {
+        alert("Vestuário.");
+    } else if (classi == 7) {
+        alert("Higiene Pessoal.");
+    } else if (classi >= 8 && classi <= 15) {
+        alert("Limpeza e Utensílios Domésticos.");
+    } else if (classi >= 16 && classi <= 20) {
+        alert("Outros.");
+    } else {
+        alert("Código inválido.");
+    }
 
-    
     //SAÍDA
 
 </script>

@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
+    let jantar = Number(prompt(`Informe o preço do jantar:`).trim());
 
-    
     //PROCESSAMENTO
+    let gorjeta = (jantar * 10) / 100;
+    let calculo = Math.round(gorjeta + jantar);
 
-    
     //SAÍDA
+    alert(`Com gorjeta a conta ficou ${calculo3} reais.`);
 
 </script>

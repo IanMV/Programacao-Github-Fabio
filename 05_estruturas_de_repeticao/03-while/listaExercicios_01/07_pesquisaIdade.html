@@ -1,23 +1,67 @@
 <meta charset="UTF-8">
 <script>
-    /*
-    PROBLEMA: PESQUISA DE IDADE
-    Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
+  /*
+  PROBLEMA: PESQUISA DE IDADE
+  Foi feita uma pesquisa entre os habitantes de uma região. Foram coletados os dados de idade, sexo (M/F) e salário. Faça um programa que calcule e mostre:
 
-    a) A média dos salários do grupo;
-    b) A maior e a menor idade do grupo;
-    c) A quantidade de mulheres na região;
-    d) A idade e o sexo da pessoa que possui o menor salário;
+  a) A média dos salários do grupo;
+  b) A maior e a menor idade do grupo;
+  c) A quantidade de mulheres na região;
+  d) A idade e o sexo da pessoa que possui o menor salário;
 
-    Finalize a entrada de dados ao ser digitada uma idade negativa.
-    */
+  Finalize a entrada de dados ao ser digitada uma idade negativa.
+  */
 
-    //ENTRADA
+  //ENTRADA
+  let participantes = 0;
+  let salarioTotal = 0;
+  let mulheresRegiao = 0;
+  let salarioBase = 0;
+  let pessoa = {};
+  let idadeBase = 0;
+  let menorIdade = 0;
+  let maiorIdade = 0;
+  let idade;
+  let salario;
+  let sexo;
 
 
-    //PROCESSAMENTO
+  //PROCESSAMENTO
+  do {
+    idade = Number(prompt("Qual a sua idade?").trim());
+    if (idade < 0) {
+      break
+    };
+    participantes += 1;
+    salario = Number(prompt("Qual o seu salario?").trim());
+    sexo = prompt("Você é do sexo masculino ou feminino? (Masculino - M Feminino - F)").trim().toUpperCase();
+    salarioTotal += salario;
+    if (sexo == "F") {
+      mulheresRegiao += 1;
+    };
+    if (salario > salarioBase) {
+      pessoa = {
+        idade: idade,
+        sexo: sexo
+      };
+      salarioBase = salario;
+    };
+    if (idade > maiorIdade) {
+      maiorIdade = idade;
+    };
+    if (participantes == 1) {
+      menorIdade = idade;
+    };
+    if (idade < menorIdade) {
+      menorIdade = idade;
+    };
 
+    
+  } while (idade > 0)
+  
+  salarioTotal /= participantes;
 
-    //SAÍDA
+  //SAÍDA
+  alert(`A média dos salarios do grupo é ${salarioTotal}.\nA maior idade do grupo é ${maiorIdade} e a menor é ${menorIdade}.\nO número de mulheres na região é ${mulheresRegiao}.\nA idade da pessoa com o menor salário é ${pessoa.idade} e o seu sexo é ${pessoa.sexo}.`);
 
 </script>
